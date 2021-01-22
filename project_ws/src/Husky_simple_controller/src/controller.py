@@ -1,3 +1,5 @@
+#! /usr/bin/env python
+
 import rospy
 from nav_msgs.msg import Odometry
 from tf.transformations import euler_from_quaternion
@@ -7,7 +9,7 @@ from math import atan2
 x = 0.0
 y = 0.0 
 theta = 0.0
-#! /usr/bin/env python
+
 
 def newOdom(msg):
     global x
@@ -29,6 +31,7 @@ speed = Twist()
 
 r = rospy.Rate(4)
 
+#set the point which the robot will move to
 goal = Point()
 goal.x = 5
 goal.y = 5
